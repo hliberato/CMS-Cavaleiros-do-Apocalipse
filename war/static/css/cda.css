@@ -1,0 +1,158 @@
+body {
+	background: url(/static/img/header.png) center top no-repeat, url(/static/img/footer.png) center bottom no-repeat, -moz-linear-gradient(top, rgb(68, 67, 183), orange);
+	background: url(/static/img/header.png) center top no-repeat, url(/static/img/footer.png) center bottom no-repeat,-webkit-gradient(linear, 0 0, 0 100%, from(rgb(68, 67, 183)), to(orange));
+	background: url(/static/img/header.png) center top no-repeat, url(/static/img/footer.png) center bottom no-repeat,-webkit-linear-gradient(top, rgb(68, 67, 183), orange);
+	background: url(/static/img/header.png) center top no-repeat, url(/static/img/footer.png) center bottom no-repeat,-o-linear-gradient(top, rgb(68, 67, 183), orange);
+	background: url(/static/img/header.png) center top no-repeat, url(/static/img/footer.png) center bottom no-repeat,linear-gradient(to bottom, rgb(68, 67, 183), orange);
+	background-size: contain; ,100% auto, 100% auto;
+	color: #000000;
+}
+
+.menu{
+	font-family: "News Cycle","Arial Narrow Bold",sans-serif;
+	background: url(/static/img/Menu4.png) center top no-repeat;
+	background-size: 100% 110%;
+}
+
+.bio{
+	background: url(/static/img/bio.png) center top no-repeat;
+	background-size: 100% 100%;
+}
+
+.logo{
+	position: relative;
+	bottom: -5px;
+}
+
+.peste{
+	position: relative;
+	height: 380px;
+  	z-index: 9;
+	bottom: -40px;
+  	right: 170px;
+}
+
+.guerra{
+	position: relative;
+	right: 110px;
+	bottom: -40px;
+	height: 360px;
+  	z-index: 3;
+}
+.fome{
+	position: relative;
+	height: 360px;
+  	bottom: -45px;
+  	z-index: 5;
+}
+.morte{
+	left: 120px;
+	position: relative;
+	bottom: -50px;
+	height: 380px;
+}
+
+.banner {
+	width: 80%;	
+}
+
+.carousel-indicators {
+  left: 93%;
+  bottom: 342px;
+}
+
+.carousel-caption {
+  left: 0;
+  position: absolute;
+  padding: 3%;
+  right: 10%;
+  top: 0;
+  bottom: 0;
+  width: 34%;
+  max-width: 100%;
+  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.6);
+  zoom: 1;
+  background-color: transparent\9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#c97817b5, endColorstr=#c97817b5)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c97817b5, endColorstr=#c97817b5);
+}
+
+.carousel-text{
+	color: #D60000;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.btn-carousel {
+	position: absolute;
+	bottom: 20px;
+  	right: 60px;
+	color: #ffffff;
+	background-color: #D60000;
+	border-color: #D60000;
+}
+
+.btn-carousel:hover,.btn-carousel:focus,.btn-carousel.focus,.btn-carousel:active,.btn-carousel.active,.open>.dropdown-toggle.btn-carousel{
+	color: #ffffff;
+	background-color: #D63333;
+	border-color: #D63333;
+}
+
+.align-carousel-div {
+  	display: table;
+	width: 100%;
+	height: 90%;
+	text-align: center;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.pager li>a, .pager li>span {
+  padding: 5px 34px !important;
+  border-radius: 3px;
+}
+
+.spoiler{ 
+	font-family: "News Cycle","Arial Narrow Bold",sans-serif;
+	font-size: 15px;
+	line-height: 1.42857143;
+	color: #000000 !important; 
+	background-color: #000000 !important;
+}
+
+.spoiler:hover { 
+	background-color:white !important; 
+}
+
+.author {
+	margin-top: -15px;
+	padding-top: 10px;
+	  padding-bottom: 10px;
+	margin-bottom: 21px;
+	list-style: none;
+	background-color: #f5f5f5;
+	border-radius: 4px;
+}
+
+a {
+  color: #D60000;
+}
+
+a:hover, a:focus {
+  color: #D60000;
+}
+
+.btn-primary {
+  background-color: #D60000;
+  border-color: #D60000;
+}
+
+a.list-group-item {
+  color: #000000;
+}
+
