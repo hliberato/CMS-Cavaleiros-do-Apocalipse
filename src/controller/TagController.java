@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import util.PMF;
-import util.TagUtil;
+import util.Util;
 
 @Controller
 @RequestMapping("/tag")
@@ -35,12 +35,14 @@ public class TagController {
 			q.setRange(0, 6);
 			List<Post> listPosts = (List<Post>) q.execute();
 			model.addAttribute("listPosts", listPosts);
-			model.addAttribute("topTags", TagUtil.getTopTags());
+			model.addAttribute("topTags", Util.getTopTags());
 			model.addAttribute("tagCounter", countPages(tag));
 			model.addAttribute("tagKey", tag);
 			//CONTROLE DO ACTIVE EM NAVBAR
 			HttpSession session = request.getSession();
 			session.setAttribute("section",null);
+			//POST RESUMÃO
+			model.addAttribute("postResumao",Util.getResumao());
 			return "tagposts";
 		}catch (Exception e){
 			return "404";
@@ -73,11 +75,13 @@ public class TagController {
 			List<Post> listPosts = (List<Post>) q.execute();
 			model.addAttribute("listPosts", listPosts);
 			model.addAttribute("tagCounter", countPages(tag));
-			model.addAttribute("topTags", TagUtil.getTopTags());
+			model.addAttribute("topTags", Util.getTopTags());
 			model.addAttribute("tagKey", tag);
 			//CONTROLE DO ACTIVE EM NAVBAR
 			HttpSession session = request.getSession();
 			session.setAttribute("section",null);
+			//POST RESUMÃO
+			model.addAttribute("postResumao",Util.getResumao());
 			return "tagposts";
 		}catch (Exception e){
 			return "404";

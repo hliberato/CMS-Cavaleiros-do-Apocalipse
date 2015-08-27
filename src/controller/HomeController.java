@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import util.PMF;
-import util.TagUtil;
+import util.Util;
 
 @Controller
 @RequestMapping("/")
@@ -27,18 +27,21 @@ public class HomeController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String home(HttpServletRequest request, ModelMap model){
 		PersistenceManager pm = PMF.get().getPersistenceManager();
+		HttpSession session = request.getSession();
 		Query q = pm.newQuery(Post.class);
 		q.setOrdering("date desc");
 		q.setRange(0, 6);
 		List<Post> listPosts = (List<Post>) q.execute();
 		model.addAttribute("listPosts", listPosts);
 		model.addAttribute("postCounter", countPages());
-		model.addAttribute("topTags", TagUtil.getTopTags());
-		//CONTROLE DO ACTIVE EM NAVBAR
-		HttpSession session = request.getSession();
+		//LISTA DE TAGS
+		model.addAttribute("topTags", Util.getTopTags());
+		//CONTROLE DO ACTIVE EM NAVBAR		
 		session.setAttribute("section",null);
 		//NOTICIAS EM DESTAQUE
 		model.addAttribute("listEvidencePosts", getListEvidencePosts());
+		//POST RESUMÃO
+		model.addAttribute("postResumao",Util.getResumao());
 		return "home";
 	}
 	 
@@ -63,10 +66,12 @@ public class HomeController {
 		List<Post> listPosts = (List<Post>) q.execute();
 		model.addAttribute("listPosts", listPosts);
 		model.addAttribute("postCounter", countPages());
-		model.addAttribute("topTags", TagUtil.getTopTags());
+		model.addAttribute("topTags", Util.getTopTags());
 		HttpSession session = request.getSession();
 		session.setAttribute("section",null);
 		session.setAttribute("listEvidencePosts", getListEvidencePosts());
+		//POST RESUMÃO
+		model.addAttribute("postResumao",Util.getResumao());
 		return "home";
 	 }
 	 
@@ -94,9 +99,13 @@ public class HomeController {
 	 }
 	 
 	@RequestMapping(value = "/sobre", method = RequestMethod.GET)
-	public String sobre(HttpServletRequest request){
+	public String sobre(HttpServletRequest request, ModelMap model){
 		HttpSession session = request.getSession();
 		session.setAttribute("section","sobre");
+		//POST RESUMÃO
+		model.addAttribute("postResumao",Util.getResumao());
+		//LISTA DE TAGS
+		model.addAttribute("topTags", Util.getTopTags());
 		return "sobre";
 	 } 
 }

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import util.PMF;
-import util.TagUtil;
+import util.Util;
 
 @Controller
 @RequestMapping("/section")
@@ -35,12 +35,13 @@ public class SectionController {
 			List<Post> listPosts = (List<Post>) q.execute();
 			model.addAttribute("listPosts", listPosts);
 			model.addAttribute("sectionCounter", countPages(section));
-			model.addAttribute("topTags", TagUtil.getTopTags());
-			model.addAttribute("sectionKey", section);
-			
+			model.addAttribute("topTags", Util.getTopTags());
+			model.addAttribute("sectionKey", section);			
 			//CONTROLE DO ACTIVE EM NAVBAR
 			HttpSession session = request.getSession();
 			session.setAttribute("section",section);
+			//POST RESUMÃO
+			model.addAttribute("postResumao",Util.getResumao());
 			return "sectionposts";
 		}catch (Exception e){
 			return "404";
@@ -73,9 +74,10 @@ public class SectionController {
 			List<Post> listPosts = (List<Post>) q.execute();
 			model.addAttribute("listPosts", listPosts);
 			model.addAttribute("sectionCounter", countPages(section));
-			model.addAttribute("topTags", TagUtil.getTopTags());
+			model.addAttribute("topTags", Util.getTopTags());
 			model.addAttribute("sectionKey", section);
-			
+			//POST RESUMÃO
+			model.addAttribute("postResumao",Util.getResumao());
 			//CONTROLE DO ACTIVE EM NAVBAR
 			HttpSession session = request.getSession();
 			session.setAttribute("section",section);

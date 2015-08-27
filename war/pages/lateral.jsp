@@ -4,8 +4,8 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<a href="http://cavaleirosdoapocalipse.com.br/post/resumo_da_semana_7_com_a_presena_de_sloth_">
-			<img class="img-rounded img-responsive" src="http://i.imgur.com/0oNmmaC.jpg">
+		<a href="http://cavaleirosdoapocalipse.com.br/post/${postResumao.key.name}">
+			<img class="img-rounded img-responsive" src="${postResumao.image}">
 		</a>
 	</div>
 </div>

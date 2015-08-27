@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="util.TagUtil" %>
+<%@ page import="util.Util" %>
 <%@ page import="model.Post" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="true" %>
-<%String json = TagUtil.listarTags();%>
+<%String json = Util.listarTags();%>
 
 <jsp:include page="header.jsp"/>
 <title>Editar post</title>

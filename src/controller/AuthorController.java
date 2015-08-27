@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import util.PMF;
-import util.TagUtil;
+import util.Util;
 
 @Controller
 @RequestMapping("/author")
@@ -39,10 +39,12 @@ public class AuthorController {
 			model.addAttribute("authorKey", a.getKey().getName());
 			model.addAttribute("author", a);
 			model.addAttribute("authorCounter", countPages(a.getCounter()));
-			model.addAttribute("topTags", TagUtil.getTopTags());
+			model.addAttribute("topTags", Util.getTopTags());
 			//CONTROLE DO ACTIVE EM NAVBAR
 			HttpSession session = request.getSession();
 			session.setAttribute("section",null);
+			//POST RESUMÃO
+			model.addAttribute("postResumao",Util.getResumao());
 			return "authorposts";
 		}catch (Exception e){
 			return "404";
@@ -78,11 +80,13 @@ public class AuthorController {
 			model.addAttribute("listPosts", listPosts);
 			model.addAttribute("authorKey", a.getKey().getName());
 			model.addAttribute("authorCounter", countPages(a.getCounter()));
-			model.addAttribute("topTags", TagUtil.getTopTags());
+			model.addAttribute("topTags", Util.getTopTags());
 			model.addAttribute("author", a);
 			//CONTROLE DO ACTIVE EM NAVBAR
 			HttpSession session = request.getSession();
 			session.setAttribute("section",null);
+			//POST RESUMÃO
+			model.addAttribute("postResumao",Util.getResumao());
 			return "authorposts";
 		}catch (Exception e){
 			return "404";

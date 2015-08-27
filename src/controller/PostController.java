@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import util.PMF;
-import util.TagUtil;
+import util.Util;
 
 @Controller
 @RequestMapping("/post")
@@ -25,11 +25,13 @@ public class PostController {
 		try {
 			Post p = pm.getObjectById(Post.class, key);
 			model.addAttribute("p",p);
-			model.addAttribute("topTags", TagUtil.getTopTags());
+			model.addAttribute("topTags", Util.getTopTags());
 			model.addAttribute("author", p.getAuthor());
 			//CONTROLE DO ACTIVE EM NAVBAR
 			HttpSession session = request.getSession();
 			session.setAttribute("section",null);
+			//POST RESUMÃO
+			model.addAttribute("postResumao",Util.getResumao());
 			return "post";
 		}catch (Exception e){
 			return "404";
