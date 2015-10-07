@@ -1,10 +1,16 @@
-<!-- Indices written at Sun, 14 Jun 2015 14:46:46 BRT -->
+<!-- Indices written at Wed, 7 Oct 2015 14:09:22 BRT -->
 
 <datastore-indexes>
 
-    <!-- Used 2 times in query history -->
+    <!-- Used 1 time in query history -->
     <datastore-index kind="Post" ancestor="false" source="auto">
         <property name="evidence" direction="asc"/>
+        <property name="date" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Post" ancestor="false" source="auto">
+        <property name="tags" direction="asc"/>
         <property name="date" direction="desc"/>
     </datastore-index>
 
