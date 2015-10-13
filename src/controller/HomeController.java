@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -69,7 +70,7 @@ public class HomeController {
 		model.addAttribute("topTags", Util.getTopTags());
 		HttpSession session = request.getSession();
 		session.setAttribute("section",null);
-		session.setAttribute("listEvidencePosts", getListEvidencePosts());
+		session.setAttribute("listEvidencePosts", new ArrayList<Post>(getListEvidencePosts()));
 		//POST RESUMÃO
 		model.addAttribute("postResumao",Util.getResumao());
 		return "home";
