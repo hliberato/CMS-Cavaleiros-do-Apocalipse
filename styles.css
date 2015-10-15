@@ -1,10 +1,5 @@
 .cda-footer{
-  background: url(images/footer.png) center bottom no-repeat;
-  background-size: 100% auto;
-}
-
-.cda-footer2{
-  background: url(images/pattern.png) center bottom no-repeat;
+  background: url(images/pattern.png) center bottom no-repeat, url(images/cda.jpg) center top no-repeat;
   background-size: 100% auto;
 }
 
@@ -31,4 +26,8 @@ footer{
 
 a{
   color: red;  
+}
+
+.cda-card {
+  margin: 0.5rem 0 0.2rem 0;
 }
