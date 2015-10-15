@@ -3,6 +3,11 @@
   background-size: 100% auto;
 }
 
+.cda-footer2{
+  background: url(images/pattern.png) center bottom no-repeat;
+  background-size: 100% auto;
+}
+
 nav {
     background-color: #FFF;
     box-shadow: none;
@@ -24,8 +29,6 @@ footer{
   color: #000000;  
 }
 
-.cda-center {
-  float: left;
-  position: relative;
-  left: -50%;
+a{
+  color: red;  
 }

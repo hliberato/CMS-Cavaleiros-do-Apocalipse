@@ -10,96 +10,143 @@
     <link href="styles.css" rel="stylesheet">
 </head>   
 <body>
-<br>
+
 <div class="container">
-
-
  <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><img src="images/logo.png" style="height: 60px;"></a>
+      <a href="#!" class="brand-logo"><img src="images/logo.png" style="height: 55px;"></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons md-dark ">menu</i></a>
+      <ul class="hide-on-med-and-down">
+        <li><a href="#" style="padding: 0 110px;">Cavaleiros!!</a></li>
+      </ul>
       <ul class="right hide-on-med-and-down">
-        <li><a href="badges.html">Autores</a></li>
-        <li><a href="collapsible.html">Sobre</a></li>
-        <li><a href="mobile.html">Contato</a></li>
+        <li><a href="#">Autores</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="badges.html">Autores</a></li>
-        <li><a href="collapsible.html">Sobre</a></li>
-        <li><a href="mobile.html">Contato</a></li>
+        <li><a href="#">Autores</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
       </ul>
     </div>
   </nav>
-
 </div>
-<hr>
+
+<div class="divider"></div>
+
 <div class="container">
- 
-  <br>
   <div class="row">
-    <div class="col s10 m4">
+    <div class="col s10 m4 offset-m4 offset-s1">
       <ul class="tabs">
-        <li class="tab col s3"><a href="#test1" class="active">Destaques</a></li>
-        <li class="tab col s3"><a href="#test2">Colunas</a></li>
+        <li class="tab col s3"><a href="#destaques" class="active">Destaques</a></li>
+        <li class="tab col s3"><a href="#colunas">Colunas</a></li>
       </ul>
     </div>
-    <div id="test1" class="col s12">Test 1</div>
-    <div id="test2" class="col s12">Test 2</div>
-  </div>
-
-<!--hoverable-->
-
-  <div class="row">
-
-    <div class="col s12 m6">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="http://i.imgur.com/WTWi39f.jpg">
-          <span class="card-title"></span>
+    <div id="destaques">
+      <div class="row">
+        <br><br><br>
+        <div class="col s12 m6">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="http://i.imgur.com/qSxWwuv.jpg">
+              <span class="card-title">O Poderoso Hamburgão! <br>Gastronomia</span>
+            </div>
+          </div>
         </div>
-        <div class="card-content">
-          <p class="truncate">Você também babou com o trailer? Fantástico, mostra o Bruce Wayne, sua super batcaverna...</p>
+        <div class="col s12 m6">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="http://i.imgur.com/4rZ1Qkt.jpg">
+              <span class="card-title">7 webséris que você precisa conhecer! <br>Games</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="http://i.imgur.com/2rNhBa3.jpg">
+              <span class="card-title">Super Girl - História, primeiro trailer e seriado "menininha".<br> Séries e TV</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="http://i.imgur.com/DK7Iz4m.jpg">
+              <span class="card-title">Novo NFS anunciado! <br>Games</span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="http://i.imgur.com/52GOawe.jpg">
+              <span class="card-title">Veja o primeiro trailer de Lego Dimension! <br>Games</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
+          <a class="waves-effect waves-light btn-large red"><i class="material-icons right">arrow_forward</i>Veja todo o conteúdo em ordem cronológica</a>
         </div>
       </div>
     </div>
-
-    <div class="col s12 m6">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="http://i.imgur.com/bXhy8rs.jpg">
-          <span class="card-title"></span>
-        </div>
-        <div class="card-content">
-          <p class="truncate">Fantástica fan fic criada por Gerardo Preciado e Daniel Bayliss, que retrata pelo olhar do ''Deus'' do universo DC o passado vergonhoso da Terra, de guerras e miséria. E antes que piore, ele encontra a triste solução para esses seres.</p>
-        </div>
-      </div>
+    <div id="colunas" class="col s12">
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="images/yuna.jpg" alt="" class="circle">
+          <span class="title">Games</span>
+          <p>First Line <br>
+             Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <i class="material-icons circle">folder</i>
+          <span class="title">Séries e TV</span>
+          <p>First Line <br>
+             Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <i class="material-icons circle green">insert_chart</i>
+          <span class="title">Gastronomia</span>
+          <p>First Line <br>
+             Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+        <li class="collection-item avatar">
+          <i class="material-icons circle red">play_arrow</i>
+          <span class="title">Eticétera</span>
+          <p>First Line <br>
+             Second Line
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+        </li>
+      </ul>
     </div>
-
-    <div class="col s12 m6">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="http://i.imgur.com/G2KjMb2.gif">
-          <span class="card-title"></span>
-        </div>
-        <div class="card-content">
-          <p class="truncate">Resolvi escrever esse especial sobre Minions e Servbots não por um acaso, mas sim para um conhecimento geral da humanidade em conhecer estes outros mascotes tão fabulosos que já existiam bem antes de "Meu Malvado Favorito".</p>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
-
-
-<footer class="page-footer cda-footer amber darken-3">
+<footer class="page-footer cda-footer amber darken-3 white-text">
   <div class="container">
     <div class="row">
-      <div class="col l6 s12">
-        <h5>Cavaleiros do Apocalipse... Ate o fim do mundo!</h5>
-        <p class="">Conteudo inteligente, e outras coisas mais que vou pensar pra escrever aqui depois. </p>
+      <div class="col l4 s12">
+        <h5 >Cavaleiros do Apocalipse, até o fim do mundo!</h5>
+        <p >Conteúdo inteligente, e outras coisas mais que vou pensar pra escrever aqui depois.</p>
       </div>
-      <div class="col l4 offset-l2 s12">
-        <h5>Categorias</h5>
+      <div class="col l4 s12">
+        <h5>Onde nos encontrar</h5>
+        <p>- Redes sociais</p>
+        <p>- Redes sociais</p>
+        <p>- Redes sociais</p>
+        <p>- Redes sociais</p>
+      </div>
+      <div class="col l4 s12">
+        <h5 >Categorias</h5>
         <ul>
           <li><a href="#!">Filmes</a></li>
           <li><a href="#!">Series e TV</a></li>
@@ -116,12 +163,11 @@
     </div>
   </div>
   <div class="footer-copyright">
-    <div class="container center">
-    Desenvolvido por <a href="#">Henrique Liberato</a> e Ilustrado por <a href="#">Lucas Fowl</a>
+    <div class="container center cda-footer2">
+    <span >Desenvolvido por <a href="#">Henrique Liberato</a> e Ilustrado por <a href="#">Lucas Fowl</a></span>
     </div>
   </div>
 </footer>
-
 
 <script type="text/javascript">
   $(document).ready(function(){
